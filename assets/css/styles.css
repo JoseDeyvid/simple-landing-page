@@ -1,6 +1,7 @@
 :root {
     --primary-color: #0A1128;
     --white: #fff;
+    --light-gray: #EEEEEE;
     --gap: 3rem;
 }
 
@@ -12,6 +13,7 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -21,8 +23,9 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
+    font-weight: 900;
 }
 
 h1 {
@@ -49,6 +52,77 @@ h6 {
     font-size: 3.5rem;
 }
 
+a {
+    text-decoration: none;
+}
+
+header {
+    background-color: var(--white);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: var(--light-gray) solid 1px;
+    padding: 0 var(--gap);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 120rem;
+}
+
+header h1 {
+    font-size: 2.3rem;
+    color: var(--primary-color);
+}
+
+header h1 a {
+    color: inherit;
+}
+
+.header-options ul {
+    display: flex;
+    list-style: none;
+}
+
+.header-options ul li {
+    padding: 2rem;
+}
+
+.header-options ul li a {
+    /* display: block;
+    padding: 2rem; */
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    position: relative;
+}
+
+.header-options ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -25%;
+    left: 50%;
+    width: 0%;
+    height: 0.2rem;
+    background: crimson;
+    transition: 300ms ease-in-out;
+  }
+  
+  .header-options ul li a:hover::after {
+    width: 100%;
+    left: 0;
+  }
+
+.header-options button:hover {
+    cursor: pointer;
+    text-decoration: #e54d26 underline 2px;
+}
+
 .main-bg {
     background: url("../img/main-bg.svg");
     background-size: cover;
@@ -64,5 +138,71 @@ h6 {
 
 .section {
     min-height: 100vh;
+    display: flex;
     
+}
+
+.top-intro {
+    display: flex;
+    align-items: center;
+    gap: var(--gap);
+}
+
+.top-intro-text p {
+    margin-top: 5rem;
+}
+.top-intro-img img {
+    max-width: 66.6rem;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    max-width: 64rem;
+}
+
+.intro h1 {
+    margin-bottom: 5rem;
+    line-height: 1.2;
+}
+
+.intro p {
+    margin-bottom: var(--gap);
+}
+
+.grid-one {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.grid-one h1 {
+    margin-bottom: 1rem;
+}
+
+.grid-one p {
+    padding-bottom: 5rem;
+    margin-bottom: var(--gap);
+}
+
+.grid-one-articles{
+    display: flex;
+}
+
+.grid-one-articles article {
+    padding-right: 2rem;
+}
+
+.grid-one-articles h2 {
+    text-transform: none;
+    font-size: 3rem;
+    padding-left: 5rem;
+    padding-bottom: 2rem;
+}
+
+.grid-one-articles p {
+    /* text-align: left; */
 }
