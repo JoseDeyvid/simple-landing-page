@@ -155,7 +155,7 @@ header h1 a {
     max-width: 66.6rem;
 }
 
-.intro {
+.intro, .pricing {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -163,46 +163,90 @@ header h1 a {
     max-width: 64rem;
 }
 
-.intro h1 {
+.intro h1, .pricing h1 {
     margin-bottom: 5rem;
     line-height: 1.2;
 }
 
-.intro p {
+.intro p, .pricing p {
     margin-bottom: var(--gap);
 }
 
-.grid-one {
+.grid, .gallery {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: start;
 }
 
-.grid-one h1 {
+.grid h1, .gallery h1 {
     margin-bottom: 1rem;
 }
 
-.grid-one p {
+.grid p, .gallery p {
     padding-bottom: 5rem;
     margin-bottom: var(--gap);
 }
 
-.grid-one-articles{
+.grid-articles{
     display: flex;
 }
 
-.grid-one-articles article {
+.gallery-imgs {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid-articles article {
     padding-right: 2rem;
 }
 
-.grid-one-articles h2 {
+.gallery-imgs img {
+    margin: 0 2rem 2rem 0;
+    border-radius: 2rem;
+}
+
+.grid-articles h2 {
     text-transform: none;
     font-size: 3rem;
     padding-left: 5rem;
     padding-bottom: 2rem;
 }
 
-.grid-one-articles p {
-    /* text-align: left; */
+.grid-articles p {
+    text-align: left;
+}
+
+.gallery-imgs img {
+    max-width: 360px;
+    max-height: 360px;
+    background-position: center;
+    background-size: cover;
+}
+
+.pricing-table {
+    overflow: hidden;
+    overflow-x: auto;
+}
+
+.pricing-table table {
+    border-collapse: collapse;
+}
+
+.pricing-table caption{
+    text-align: left;
+    font-style: italic;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+}
+
+.pricing-table table thead, tfoot{
+    background-color: #ededed;
+}
+
+.pricing-table th, .pricing-table td {
+    border: .1rem solid #ededed;
+    white-space: nowrap;
+    padding: 1rem;
+    text-align: left;
 }
