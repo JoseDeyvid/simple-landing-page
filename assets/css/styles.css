@@ -20,9 +20,15 @@ body {
     font-family: "Open Sans", sans-serif;
     font-size: 2rem;
     color: var(--primary-color);
+    width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     font-weight: 900;
@@ -111,12 +117,12 @@ header h1 a {
     height: 0.2rem;
     background: crimson;
     transition: 300ms ease-in-out;
-  }
-  
-  .header-options ul li a:hover::after {
+}
+
+.header-options ul li a:hover::after {
     width: 100%;
     left: 0;
-  }
+}
 
 .header-options button:hover {
     cursor: pointer;
@@ -132,30 +138,52 @@ header h1 a {
 
 .main-content {
     padding: var(--gap);
-    max-width: 1200px;
+    max-width: 120rem;
     margin: 0 auto;
+    /* border: 5px solid green; */
 }
 
 .section {
     min-height: 100vh;
     display: flex;
-    
+
 }
 
-.top-intro {
+.top-intro,
+.contact-infos {
     display: flex;
     align-items: center;
     gap: var(--gap);
+    flex-wrap: wrap;
+    padding-top: 5rem;
 }
 
-.top-intro-text p {
+.top-intro-text, .top-intro-img, .contact-text, .contact-img {
+    /* border: 5px solid #ccc; */
+    flex-grow: 1;
+    flex-basis: 400px;
+    flex-shrink: 1;
+    /* max-width: 66.6rem; */
+}
+
+.top-intro-img, .contact-img {
+    flex-grow: 2;
+    flex-basis: 450px;
+    flex-shrink: 1;
+}
+
+.top-intro-text p,
+.contact-infos p {
     margin-top: 5rem;
 }
-.top-intro-img img {
-    max-width: 66.6rem;
+
+.top-intro-img img,
+.contact-img img {
+    max-width: 100%;
 }
 
-.intro, .pricing {
+.intro,
+.pricing {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -163,32 +191,37 @@ header h1 a {
     max-width: 64rem;
 }
 
-.intro h1, .pricing h1 {
+.intro h1,
+.pricing h1 {
     margin-bottom: 5rem;
     line-height: 1.2;
 }
 
-.intro p, .pricing p {
+.intro p,
+.pricing p {
     margin-bottom: var(--gap);
 }
 
-.grid, .gallery {
+.grid,
+.gallery {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: start;
 }
 
-.grid h1, .gallery h1 {
+.grid h1,
+.gallery h1 {
     margin-bottom: 1rem;
 }
 
-.grid p, .gallery p {
+.grid p,
+.gallery p {
     padding-bottom: 5rem;
     margin-bottom: var(--gap);
 }
 
-.grid-articles{
+.grid-articles {
     display: flex;
 }
 
@@ -233,20 +266,104 @@ header h1 a {
     border-collapse: collapse;
 }
 
-.pricing-table caption{
+.pricing-table caption {
     text-align: left;
     font-style: italic;
     margin-bottom: 1rem;
     font-size: 1.6rem;
 }
 
-.pricing-table table thead, tfoot{
+.pricing-table table thead,
+tfoot {
     background-color: #ededed;
 }
 
-.pricing-table th, .pricing-table td {
+.pricing-table th,
+.pricing-table td {
     border: .1rem solid #ededed;
     white-space: nowrap;
     padding: 1rem;
     text-align: left;
 }
+
+/* .form-field:nth-child(5) {
+    border: 5px solid green;
+    grid-column: span 2;
+}
+
+.contact-form fieldset {
+    border: 5px solid red;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+} */
+
+.contact-form {
+    /* grid-column: span 2; */
+
+}
+
+.contact-form .form-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--gap);
+    border: none;
+}
+
+
+.form-grid legend {
+    font-style: italic;
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
+}
+
+
+.form-group {
+    /* border: 5px solid red; */
+    flex: 1 1 100px;
+}
+
+/* 
+  .form-group label {
+    display: block;
+    margin-bottom: 1rem;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    border: none;
+    background: var(--white);
+    padding: 1.5rem 2rem;
+    width: 100%;
+    font-size: 3rem;
+    outline: none;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    box-shadow: 0 0 10px 2px crimson;
+  }
+  
+  .form-group button {
+    border: 0.5rem solid var(--white);
+    background: none;
+    color: var(--white);
+    padding: 1.5rem 2rem;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+  }
+  
+  .form-group button:hover {
+    background: var(--white);
+    color: var(--primary-color);
+  }
+  
+  .form-group ::placeholder {
+    color: #ededed;
+  }
+
+  body .full-width {
+    width: 100%;
+    flex: 1 1 100%;
+  } */
