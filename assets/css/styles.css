@@ -140,7 +140,6 @@ header h1 a {
     padding: var(--gap);
     max-width: 120rem;
     margin: 0 auto;
-    /* border: 5px solid green; */
 }
 
 .section {
@@ -158,7 +157,10 @@ header h1 a {
     padding-top: 5rem;
 }
 
-.top-intro-text, .top-intro-img, .contact-text, .contact-img {
+.top-intro-text,
+.top-intro-img,
+.contact-text,
+.contact-img {
     /* border: 5px solid #ccc; */
     flex-grow: 1;
     flex-basis: 400px;
@@ -166,7 +168,8 @@ header h1 a {
     /* max-width: 66.6rem; */
 }
 
-.top-intro-img, .contact-img {
+.top-intro-img,
+.contact-img {
     flex-grow: 2;
     flex-basis: 450px;
     flex-shrink: 1;
@@ -260,10 +263,13 @@ header h1 a {
 .pricing-table {
     overflow: hidden;
     overflow-x: auto;
+    /* border: 5px solid red; */
 }
 
 .pricing-table table {
     border-collapse: collapse;
+    min-width: 360px;
+    width: 100%;
 }
 
 .pricing-table caption {
@@ -319,32 +325,28 @@ tfoot {
 
 
 .form-group {
-    /* border: 5px solid red; */
-    flex: 1 1 100px;
+    flex: 1 1 320px;
 }
 
-/* 
-  .form-group label {
+.form-group label {
     display: block;
     margin-bottom: 1rem;
-  }
-  
-  .form-group input,
-  .form-group textarea {
-    border: none;
-    background: var(--white);
-    padding: 1.5rem 2rem;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 1.5rem 3rem;
     width: 100%;
     font-size: 3rem;
     outline: none;
-  }
-  
-  .form-group input:focus,
-  .form-group textarea:focus {
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
     box-shadow: 0 0 10px 2px crimson;
-  }
-  
-  .form-group button {
+}
+
+.form-group button {
     border: 0.5rem solid var(--white);
     background: none;
     color: var(--white);
@@ -352,18 +354,108 @@ tfoot {
     font-size: 3rem;
     cursor: pointer;
     transition: all 300ms ease-in-out;
-  }
-  
-  .form-group button:hover {
+}
+
+
+.form-group button:hover {
     background: var(--white);
     color: var(--primary-color);
-  }
-  
-  .form-group ::placeholder {
-    color: #ededed;
-  }
+}
 
-  body .full-width {
+.form-group ::placeholder {
+    color: #ededed;
+}
+
+body .full-width {
     width: 100%;
     flex: 1 1 100%;
-  } */
+}
+
+.footer {
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.footer p {
+    margin: 0;
+    padding: 3rem;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--white);
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: var(--primary-color);
+    transform: rotate(-90deg);
+    border: 0.1rem solid var(--primary-color);
+}
+
+.show-menu {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    
+    h1 {
+        font-size: 3.6rem;
+    }
+
+    .header-content {
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
+        text-align: center;
+    }
+
+    /* .header-content {
+        display: none;
+    } */
+
+
+    .show-menu:checked~header .header-content {
+        display: none;
+    }
+
+    .header-options ul {
+        flex-direction: column;
+    }
+
+    .back-to-top {
+        display: none;
+    }
+
+    .show-menu-label::after {
+        content: "☰";
+        position: fixed;
+        top: 2rem;
+        right: 2rem;
+        z-index: 1;
+        color: var(--white);
+        background-color: var(--primary-color);
+        border-radius: 50%;
+        font-size: 3rem;
+        cursor: pointer;
+        line-height: 3rem;
+        width: 3rem;
+        height: 3rem;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .header-spacing {
+        display: none;
+    }
+
+    .grid-articles {
+        flex-direction: column;
+    }
+
+
+}

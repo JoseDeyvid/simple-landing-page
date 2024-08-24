@@ -14,11 +14,13 @@
 </head>
 
 <body>
+    <input type="checkbox" id="show-menu" class="show-menu" aria-label="open or close menu" role="button">
+    <label for="show-menu" class="show-menu-label" title="show-menu"></label>
     <header>
         <div class="header-content">
-            <h1><a href="#">LOGO</a></h1>
+            <h1 onclick="getElementById('show-menu').checked = true;"><a href="#">LOGO</a></h1>
             <nav class="header-options">
-                <ul>
+                <ul onclick="getElementById('show-menu').checked = true;">
                     <li><a href="#intro">intro</a></li>
                     <li><a href="#grid-one">grid-one</a></li>
                     <li><a href="#gallery">gallery</a></li>
@@ -222,39 +224,6 @@
 
 
 
-
-
-
-            <!-- <div class="contact-form">
-                <form action="">
-                    <fieldset>
-                        <legend>Contact me</legend>
-                        <div class="form-field">
-                            <label for="">First name</label>
-                            <input type="text" placeholder="Your name">
-                        </div>
-                        <div class="form-field">
-                            <label for="">Last name</label>
-                            <input type="text" placeholder="Your last name">
-                        </div>
-
-                        <div class="form-field">
-                            <label for="">E-mail</label>
-                            <input type="email" placeholder="Your e-mail">
-                        </div>
-
-                        <div class="form-field">
-                            <label for="">Message</label>
-                            <textarea name="" id=""></textarea>
-                        </div>
-                    </fieldset>
-                    <input type="submit" value="Send message">
-                </form>
-            </div> -->
-
-
-
-
             <div class="contact-form">
                 <fieldset class="form-grid">
                     <legend>Contact me</legend>
@@ -287,6 +256,11 @@
 
         </div>
     </section>
+    <footer id="footer" class="footer">
+        <p><span>Feito por José Deyvid</span></p>
+    </footer>
+
+    <a class="back-to-top" href="#">➤</a>
 </body>
 
 </html>
